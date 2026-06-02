@@ -1,0 +1,7 @@
+# Ignore all files and folders in Downloads
+/*
+
+# Except the Next.js project folder, gitignore, and README
+!/nilkanth-portfolio/
+!/.gitignore
+!/README.md
