@@ -273,6 +273,92 @@ export default function Projects() {
 
           </div>
 
+          {/* Golden Wealth Cycle - Infinite Scrolling Design Showcase */}
+          <div className="pt-20 border-t border-white/5 space-y-12">
+            <div className="text-center space-y-4 max-w-3xl mx-auto px-4">
+              <span className="text-xs font-mono tracking-widest uppercase text-gold font-semibold">Visual Showcase</span>
+              <h4 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Design Carousel</h4>
+              <p className="text-gray-400 text-base md:text-lg font-light leading-relaxed">
+                Explore a rotating collection of professional graphic designs and templates. Hover over any design to pause and inspect.
+              </p>
+            </div>
+
+            {/* Infinite Marquee Rows */}
+            <div className="marquee-container group/marquee flex flex-col gap-5 w-full overflow-hidden py-4 relative">
+              {/* Fade Overlay Left & Right */}
+              <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#121212] via-[#121212]/80 to-transparent z-20 pointer-events-none" />
+              <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#121212] via-[#121212]/80 to-transparent z-20 pointer-events-none" />
+
+              {/* Row 1: Left-scrolling */}
+              <div className="flex gap-4 w-max animate-marquee-left group-hover/marquee:[animation-play-state:paused]">
+                {/* Original set */}
+                {["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "11.png", "22.png"].map((file, i) => (
+                  <div 
+                    key={`row1-${i}`} 
+                    className="relative flex-shrink-0 h-[180px] md:h-[260px] aspect-[4/5] rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-[0_10px_20px_rgba(0,0,0,0.4)] transition-all duration-500 hover:scale-[1.04] hover:border-gold/40 hover:shadow-[0_15px_30px_rgba(0,217,255,0.12)] group"
+                  >
+                    <img
+                      src={`/design/${file}`}
+                      alt={`Design ${file}`}
+                      className="w-full h-full object-cover select-none pointer-events-none"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </div>
+                ))}
+                {/* Duplicated set for seamless loop */}
+                {["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "11.png", "22.png"].map((file, i) => (
+                  <div 
+                    key={`row1-dup-${i}`} 
+                    className="relative flex-shrink-0 h-[180px] md:h-[260px] aspect-[4/5] rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-[0_10px_20px_rgba(0,0,0,0.4)] transition-all duration-500 hover:scale-[1.04] hover:border-gold/40 hover:shadow-[0_15px_30px_rgba(0,217,255,0.12)] group"
+                  >
+                    <img
+                      src={`/design/${file}`}
+                      alt={`Design ${file} Duplicate`}
+                      className="w-full h-full object-cover select-none pointer-events-none"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </div>
+                ))}
+              </div>
+
+              {/* Row 2: Right-scrolling */}
+              <div className="flex gap-4 w-max animate-marquee-right group-hover/marquee:[animation-play-state:paused]">
+                {/* Original set */}
+                {["33.png", "44.png", "55.png", "66.png", "77.png", "111.png", "222.png", "333.png", "444.png"].map((file, i) => (
+                  <div 
+                    key={`row2-${i}`} 
+                    className="relative flex-shrink-0 h-[180px] md:h-[260px] aspect-[4/5] rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-[0_10px_20px_rgba(0,0,0,0.4)] transition-all duration-500 hover:scale-[1.04] hover:border-gold/40 hover:shadow-[0_15px_30px_rgba(0,217,255,0.12)] group"
+                  >
+                    <img
+                      src={`/design/${file}`}
+                      alt={`Design ${file}`}
+                      className="w-full h-full object-cover select-none pointer-events-none"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </div>
+                ))}
+                {/* Duplicated set for seamless loop */}
+                {["33.png", "44.png", "55.png", "66.png", "77.png", "111.png", "222.png", "333.png", "444.png"].map((file, i) => (
+                  <div 
+                    key={`row2-dup-${i}`} 
+                    className="relative flex-shrink-0 h-[180px] md:h-[260px] aspect-[4/5] rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-[0_10px_20px_rgba(0,0,0,0.4)] transition-all duration-500 hover:scale-[1.04] hover:border-gold/40 hover:shadow-[0_15px_30px_rgba(0,217,255,0.12)] group"
+                  >
+                    <img
+                      src={`/design/${file}`}
+                      alt={`Design ${file} Duplicate`}
+                      className="w-full h-full object-cover select-none pointer-events-none"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
