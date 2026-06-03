@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -36,7 +37,7 @@ function Particles() {
       </bufferGeometry>
       <pointsMaterial 
         size={0.03} 
-        color="#D4AF37" 
+        color="#00d9ff" 
         transparent 
         opacity={0.5} 
         blending={THREE.AdditiveBlending} 
@@ -153,7 +154,7 @@ export default function Contact() {
             <a 
               href="/resume.pdf"
               download
-              className="group px-6 py-3.5 bg-gold text-black hover:bg-white transition-colors duration-300 font-semibold uppercase tracking-wider text-xs rounded-full flex items-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.2)]"
+              className="group px-6 py-3.5 bg-gold text-black hover:bg-white transition-colors duration-300 font-semibold uppercase tracking-wider text-xs rounded-full flex items-center gap-2 shadow-[0_0_20px_rgba(0,217,255,0.4)]"
             >
               <Download className="w-4 h-4" />
               Download Resume

@@ -74,6 +74,8 @@ export default function ScrollyCanvas() {
         const canvasRatio = canvas.width / canvas.height;
         const imgRatio = img.width / img.height;
 
+        // Zoom in slightly to allow horizontal/vertical panning and avoid overlapping text
+        const zoom = 1.12; 
         let renderWidth = canvas.width;
         let renderHeight = canvas.height;
         let x = 0;
@@ -81,11 +83,17 @@ export default function ScrollyCanvas() {
 
         if (canvasRatio < imgRatio) {
           // Canvas is taller than image (relative to width)
-          renderWidth = canvas.height * imgRatio;
-          x = (canvas.width - renderWidth) / 2;
+          renderWidth = canvas.height * imgRatio * zoom;
+          renderHeight = canvas.height * zoom;
+          // Shift the crop to the right (x closer to 0) to keep the subject visible on the right half of the screen
+          x = (canvas.width - renderWidth) * 0.30;
+          y = (canvas.height - renderHeight) / 2;
         } else {
           // Canvas is wider than image (relative to height)
-          renderHeight = canvas.width / imgRatio;
+          renderWidth = canvas.width * zoom;
+          renderHeight = (canvas.width / imgRatio) * zoom;
+          // Shift the crop to the right (x closer to 0) to push the face to the right half of the desktop screen
+          x = (canvas.width - renderWidth) * 0.15;
           y = (canvas.height - renderHeight) / 2;
         }
 
@@ -111,6 +119,9 @@ export default function ScrollyCanvas() {
         )}
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full object-cover" />
         
+        {/* Soft bottom gradient to merge seamlessly with the next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#121212] to-transparent pointer-events-none z-10" />
+
         {/* Parallax Overlay Text Sections */}
         <Overlay scrollYProgress={scrollYProgress} />
       </div>

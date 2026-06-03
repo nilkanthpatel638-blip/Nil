@@ -3,7 +3,7 @@
 :root {
   --background: #121212;
   --foreground: #ffffff;
-  --gold: #D4AF37;
+  --gold: #00d9ff; /* Glowing Lightning Blue */
 }
 
 @theme inline {

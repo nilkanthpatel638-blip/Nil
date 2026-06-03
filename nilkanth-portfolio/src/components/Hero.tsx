@@ -34,7 +34,7 @@ function FloatingGeometry() {
       <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
         <mesh position={[-2, 1, 0]}>
           <icosahedronGeometry args={[1, 0]} />
-          <meshStandardMaterial color="#D4AF37" wireframe />
+          <meshStandardMaterial color="#00d9ff" wireframe />
         </mesh>
       </Float>
       
@@ -48,7 +48,7 @@ function FloatingGeometry() {
       <Float speed={2.5} rotationIntensity={1} floatIntensity={3}>
         <mesh position={[0, 2, -2]}>
           <torusGeometry args={[0.5, 0.1, 16, 100]} />
-          <meshStandardMaterial color="#D4AF37" roughness={0.1} metalness={0.9} />
+          <meshStandardMaterial color="#00d9ff" roughness={0.1} metalness={0.9} />
         </mesh>
       </Float>
     </group>
@@ -122,7 +122,7 @@ export default function Hero() {
         <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
-          <directionalLight position={[-10, -10, -10]} intensity={0.5} color="#D4AF37" />
+          <directionalLight position={[-10, -10, -10]} intensity={0.5} color="#00d9ff" />
           <FloatingGeometry />
           <ContactShadows position={[0, -2.5, 0]} opacity={0.4} scale={20} blur={2} far={4} />
           <Environment preset="city" />

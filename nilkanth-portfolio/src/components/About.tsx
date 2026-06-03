@@ -64,7 +64,7 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="relative w-full min-h-screen bg-[#121212] py-32 px-4 md:px-12 overflow-hidden flex items-center border-t border-white/5">
+    <section ref={sectionRef} id="about" className="relative w-full min-h-screen bg-[#121212] py-32 px-4 md:px-12 overflow-hidden flex items-center">
       {/* Background Grid */}
       <div className="absolute inset-0 z-0 opacity-5 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
       
@@ -131,7 +131,7 @@ export default function About() {
         <div className="lg:col-span-5 flex items-center justify-center perspective-1000">
           <motion.div 
             style={{ y, rotateX, rotateY }}
-            className="w-full max-w-md aspect-[3/4] rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-8 flex flex-col justify-between shadow-[0_0_50px_rgba(212,175,55,0.05)] relative overflow-hidden group"
+            className="w-full max-w-md aspect-[3/4] rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-8 flex flex-col justify-between shadow-[0_0_50px_rgba(0,217,255,0.1)] relative overflow-hidden group"
           >
             {/* Card Glare */}
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 transform -translate-x-full group-hover:translate-x-full"></div>

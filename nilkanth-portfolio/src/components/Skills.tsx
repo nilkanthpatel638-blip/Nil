@@ -8,7 +8,7 @@ import { Award, Briefcase, Cpu, CheckSquare } from "lucide-react";
 
 // core skills for 3D sphere tags
 const sphereSkills = [
-  { name: "Financial Analysis", color: "#D4AF37", position: [-2, 1.5, 0] as [number, number, number] },
+  { name: "Financial Analysis", color: "#00d9ff", position: [-2, 1.5, 0] as [number, number, number] },
   { name: "AI Automation", color: "#00E5FF", position: [2, 1, 1] as [number, number, number] },
   { name: "Data Analysis", color: "#ffffff", position: [0, 2.5, -2] as [number, number, number] },
   { name: "Excel Models", color: "#10B981", position: [-1.5, -2, 2] as [number, number, number] },
@@ -142,7 +142,7 @@ export default function Skills() {
             <Canvas camera={{ position: [0, 0, 7.5], fov: 45 }}>
               <ambientLight intensity={0.5} />
               <directionalLight position={[10, 10, 10]} intensity={1.5} />
-              <directionalLight position={[-10, -10, -10]} intensity={0.5} color="#D4AF37" />
+              <directionalLight position={[-10, -10, -10]} intensity={0.5} color="#00d9ff" />
               
               {sphereSkills.map((skill, index) => (
                 <SkillSphere 

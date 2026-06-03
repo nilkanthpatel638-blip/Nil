@@ -98,7 +98,7 @@ export default function Process() {
                 <div className="md:w-1/2"></div>
                 
                 {/* Center Node */}
-                <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-[#0a0a0a] border border-gold rounded-full z-10 flex items-center justify-center shadow-[0_0_15px_rgba(212,175,55,0.3)] hidden md:flex">
+                <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-[#0a0a0a] border border-gold rounded-full z-10 flex items-center justify-center shadow-[0_0_15px_rgba(0,217,255,0.5)] hidden md:flex">
                   <span className="text-gold font-mono text-sm">{step.num}</span>
                 </div>
 

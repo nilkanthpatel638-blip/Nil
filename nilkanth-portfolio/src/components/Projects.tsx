@@ -203,21 +203,13 @@ export default function Projects() {
                       backfaceVisibility: "hidden", 
                       transform: "translateZ(15px)" 
                     }}
-                    className="absolute inset-0 bg-gradient-to-br from-[#1b2b4a] to-[#0a1120] border border-gold/40 rounded-r-md p-6 flex flex-col justify-between"
+                    className="absolute inset-0 bg-[#ffffff] border border-gold/40 rounded-r-md overflow-hidden"
                   >
-                    <div className="text-center">
-                      <span className="text-[10px] text-gold font-mono tracking-[0.25em] uppercase font-bold">PLAYBOOK</span>
-                      <div className="w-8 h-[1px] bg-gold/50 mx-auto my-3"></div>
-                    </div>
-                    <div className="my-auto">
-                      <h5 className="text-xl font-bold tracking-tight text-center text-white leading-tight">
-                        THE GOLDEN WEALTH CYCLE
-                      </h5>
-                      <p className="text-[8px] font-mono text-gold text-center mt-2 tracking-widest">FINANCIAL MINDSET</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-[9px] font-mono text-gray-400">NILKANTH PATEL</p>
-                    </div>
+                    <img 
+                      src="/golden-wealth-cycle.png" 
+                      alt="The Golden Wealth Cycle Cover" 
+                      className="w-full h-full object-cover object-center select-none" 
+                    />
                   </div>
 
                   {/* Spine */}

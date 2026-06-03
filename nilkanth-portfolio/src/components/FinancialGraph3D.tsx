@@ -72,7 +72,7 @@ function FloatingAssets() {
         </bufferGeometry>
         <pointsMaterial 
           size={0.035} 
-          color="#D4AF37" 
+          color="#00d9ff" 
           transparent 
           opacity={0.3} 
           sizeAttenuation 
@@ -84,7 +84,7 @@ function FloatingAssets() {
         <mesh castShadow receiveShadow>
           <torusGeometry args={[0.7, 0.15, 16, 100]} />
           <meshStandardMaterial 
-            color="#D4AF37" 
+            color="#00d9ff" 
             roughness={0.1} 
             metalness={0.9} 
             envMapIntensity={1}
@@ -133,7 +133,7 @@ export default function FinancialGraph3D() {
         
         {/* Lights designed to illuminate gold and glass colors nicely */}
         <directionalLight position={[5, 8, 5]} intensity={1.5} castShadow />
-        <pointLight position={[10, 10, 10]} intensity={1} color="#D4AF37" />
+        <pointLight position={[10, 10, 10]} intensity={1} color="#00d9ff" />
         <pointLight position={[-10, -10, -10]} intensity={0.6} color="#3b82f6" />
         <directionalLight position={[-5, 5, -5]} intensity={0.5} color="#ffffff" />
         

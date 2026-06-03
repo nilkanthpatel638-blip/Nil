@@ -30,7 +30,7 @@ export default function Certifications() {
           <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/5 to-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 rounded-3xl pointer-events-none"></div>
 
           {/* Certificate Icon Visual */}
-          <div className="w-24 h-24 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(212,175,55,0.1)] group-hover:scale-105 transition-transform duration-300">
+          <div className="w-24 h-24 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(0,217,255,0.2)] group-hover:scale-105 transition-transform duration-300">
             <Award className="w-12 h-12 text-gold" />
           </div>
 
