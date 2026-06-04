@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { DollarSign, BookOpen, Laptop, Sparkles, TrendingUp, HelpCircle } from "lucide-react";
+import VideoNewspaper from "./VideoNewspaper";
 
 export default function Projects() {
   // Calculator State
@@ -358,6 +359,9 @@ export default function Projects() {
               </div>
             </div>
           </div>
+
+          {/* Draggable & Floating Newspaper Videos */}
+          <VideoNewspaper />
 
         </div>
       </div>
