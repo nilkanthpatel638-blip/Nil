@@ -6,8 +6,8 @@ import SmoothScrolling from "@/components/SmoothScrolling";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Nilkanth Patel | Finance & Digital Strategy Professional",
-  description: "Bridging Finance, Technology, and AI to Build Smarter Solutions.",
+  title: "Nilkanth Patel | Digital Creator, Designer & Web Developer",
+  description: "Crafting visual stories, building automated web systems, and optimizing creative workflows with AI.",
 };
 
 export default function RootLayout({

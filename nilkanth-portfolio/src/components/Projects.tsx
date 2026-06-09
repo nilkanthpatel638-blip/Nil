@@ -1,35 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { DollarSign, BookOpen, Laptop, Sparkles, TrendingUp, HelpCircle } from "lucide-react";
+import { TrendingUp, Globe, Video } from "lucide-react";
 import VideoNewspaper from "./VideoNewspaper";
 
 export default function Projects() {
-  // Calculator State
-  const [monthlySave, setMonthlySave] = useState(5000); // in INR or general currency
-  const [years, setYears] = useState(15);
-  const [expectedReturn, setExpectedReturn] = useState(12); // 12% standard index return
-
-  // Compound Interest Calculation: A = P * (((1 + i)^n - 1) / i) * (1 + i)
-  const calculateWealth = () => {
-    const monthlyRate = expectedReturn / 12 / 100;
-    const months = years * 12;
-    const invested = monthlySave * months;
-    
-    // Future value of annuity due
-    const total = monthlySave * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) * (1 + monthlyRate);
-    const returns = total - invested;
-
-    return {
-      invested: Math.round(invested).toLocaleString("en-IN"),
-      returns: Math.round(returns).toLocaleString("en-IN"),
-      total: Math.round(total).toLocaleString("en-IN"),
-    };
-  };
-
-  const wealth = calculateWealth();
-
   return (
     <section id="projects" className="w-full py-32 bg-[#121212] relative px-4 md:px-12 border-t border-white/5">
       {/* Background radial highlight */}
@@ -38,53 +12,64 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-20 text-center">
           <h2 className="text-gold font-mono text-sm tracking-widest uppercase mb-4 font-semibold">Featured Work</h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">FinTech & Publishing.</h3>
+          <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Design, Code & Automation.</h3>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg font-light">
-            Interactive digital tools and publications designed to build smart, automated financial strategies.
+            Interactive web applications and digital assets engineered to drive engagement, automate pipelines, and build organic authority.
           </p>
         </div>
 
         <div className="space-y-32">
           
-          {/* Project 1: AI-Powered Financial Website (Laptop Mockup) */}
+          {/* Project 1: Finovo Personal Finance & Budgeting (Laptop Mockup) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left: Project Details */}
             <div className="lg:col-span-5 space-y-6">
               <div className="flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-gold/10 border border-gold/20">
-                  <Laptop className="w-6 h-6 text-gold" />
+                  <Globe className="w-6 h-6 text-gold" />
                 </div>
                 <span className="text-xs font-mono tracking-widest uppercase text-gold">FinTech Platform</span>
               </div>
               
-              <h4 className="text-3xl font-bold text-white tracking-tight">AI-Powered Financial Website</h4>
+              <h4 className="text-3xl font-bold text-white tracking-tight">Finovo — Indian Personal Finance</h4>
               
               <p className="text-gray-400 font-light leading-relaxed">
-                Designed and developed a personal finance platform featuring an AI-powered wealth calculator. It helps users model compound interest, predict growth trends, and organize financial goals interactively.
+                Developed and designed a premium, modern personal finance and budgeting web application custom-tailored for Indian users. Track investments, set budgets, monitor expenses, and calculate savings goals dynamically.
               </p>
+
+              <div className="flex flex-wrap gap-2.5">
+                <a 
+                  href="https://finovo-bkwm.vercel.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-full bg-gold/10 hover:bg-gold/20 border border-gold/30 text-gold text-xs font-mono font-medium transition-all"
+                >
+                  VISIT LIVE APP →
+                </a>
+              </div>
 
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="p-4 bg-white/5 border border-white/5 rounded-xl">
                   <span className="block text-gold text-xs font-mono mb-1">FEATURE 01</span>
-                  <span className="text-sm font-semibold text-white">AI Calculator</span>
+                  <span className="text-sm font-semibold text-white">Dynamic Budget Planner</span>
                 </div>
                 <div className="p-4 bg-white/5 border border-white/5 rounded-xl">
                   <span className="block text-gold text-xs font-mono mb-1">FEATURE 02</span>
-                  <span className="text-sm font-semibold text-white">Goal Planning</span>
+                  <span className="text-sm font-semibold text-white">Expense Tracking</span>
                 </div>
                 <div className="p-4 bg-white/5 border border-white/5 rounded-xl">
                   <span className="block text-gold text-xs font-mono mb-1">FEATURE 03</span>
-                  <span className="text-sm font-semibold text-white">Interactive Dashboard</span>
+                  <span className="text-sm font-semibold text-white">Investment Calculator</span>
                 </div>
                 <div className="p-4 bg-white/5 border border-white/5 rounded-xl">
                   <span className="block text-gold text-xs font-mono mb-1">FEATURE 04</span>
-                  <span className="text-sm font-semibold text-white">Wealth Projections</span>
+                  <span className="text-sm font-semibold text-white">Premium UI Shell</span>
                 </div>
               </div>
             </div>
 
-            {/* Right: Laptop Screen Mockup with Working Calculator */}
+            {/* Right: Laptop Screen Mockup with Live Web Preview */}
             <div className="lg:col-span-7 flex justify-center">
               <div className="w-full max-w-[550px] relative">
                 
@@ -94,84 +79,15 @@ export default function Projects() {
                   {/* Laptop Camera */}
                   <div className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-[#111111] rounded-full z-20"></div>
 
-                  {/* Laptop Screen Content (Working Web Calculator App) */}
-                  <div className="w-full h-full bg-[#0a0a0a] rounded-lg overflow-y-auto p-4 flex flex-col justify-between text-white select-none scrollbar-thin">
-                    <div className="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
-                      <div className="flex items-center gap-1.5">
-                        <Sparkles className="w-4 h-4 text-gold" />
-                        <span className="text-[11px] font-mono tracking-wider font-semibold text-gray-300">WEALTH-CALC V1.0</span>
-                      </div>
-                      <span className="text-[10px] text-emerald-500 font-mono flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping"></span>
-                        AI Models Active
-                      </span>
-                    </div>
-
-                    {/* Calculator Sliders */}
-                    <div className="space-y-3.5 my-2">
-                      <div>
-                        <div className="flex justify-between text-[10px] text-gray-400 mb-1 font-mono">
-                          <span>MONTHLY SAVINGS</span>
-                          <span className="text-gold">₹{monthlySave.toLocaleString("en-IN")}</span>
-                        </div>
-                        <input 
-                          type="range" 
-                          min="1000" 
-                          max="50000" 
-                          step="1000"
-                          value={monthlySave} 
-                          onChange={(e) => setMonthlySave(Number(e.target.value))}
-                          className="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold"
-                        />
-                      </div>
-
-                      <div>
-                        <div className="flex justify-between text-[10px] text-gray-400 mb-1 font-mono">
-                          <span>INVESTMENT DURATION</span>
-                          <span className="text-gold">{years} Years</span>
-                        </div>
-                        <input 
-                          type="range" 
-                          min="5" 
-                          max="40" 
-                          value={years} 
-                          onChange={(e) => setYears(Number(e.target.value))}
-                          className="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold"
-                        />
-                      </div>
-
-                      <div>
-                        <div className="flex justify-between text-[10px] text-gray-400 mb-1 font-mono">
-                          <span>EXPECTED RETURN</span>
-                          <span className="text-gold">{expectedReturn}% p.a.</span>
-                        </div>
-                        <input 
-                          type="range" 
-                          min="6" 
-                          max="20" 
-                          value={expectedReturn} 
-                          onChange={(e) => setExpectedReturn(Number(e.target.value))}
-                          className="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Calculator Results */}
-                    <div className="mt-3 bg-white/5 border border-white/5 rounded-lg p-3 grid grid-cols-3 gap-2 text-center">
-                      <div>
-                        <span className="block text-[8px] text-gray-500 font-mono">INVESTED</span>
-                        <span className="text-xs font-semibold text-gray-300">₹{wealth.invested}</span>
-                      </div>
-                      <div>
-                        <span className="block text-[8px] text-gray-500 font-mono">EST. GAINS</span>
-                        <span className="text-xs font-semibold text-blue-400">₹{wealth.returns}</span>
-                      </div>
-                      <div>
-                        <span className="block text-[8px] text-gold font-mono font-semibold">TOTAL VALUE</span>
-                        <span className="text-xs font-bold text-gold">₹{wealth.total}</span>
-                      </div>
-                    </div>
-
+                  {/* Laptop Screen Content (Live Web Preview) */}
+                  <div className="w-full h-full bg-[#0a0a0a] rounded-lg overflow-hidden relative">
+                    <iframe 
+                      src="https://finovo-bkwm.vercel.app" 
+                      title="Finovo Live Preview"
+                      className="w-full h-full border-0 bg-[#0a0a0a]"
+                      sandbox="allow-scripts allow-same-origin allow-forms"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
 
@@ -185,96 +101,88 @@ export default function Projects() {
 
           </div>
 
-          {/* Project 2: Golden Wealth Cycle (CSS 3D Book Animation) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center lg:flex-row-reverse">
+          {/* Project 2: Finomark Strategic Agency & Production Studio (Laptop Mockup - Alternated Layout) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            {/* Left: 3D Book Mockup */}
-            <div className="lg:col-span-6 flex justify-center order-last lg:order-first">
-              <div className="relative py-12 perspective-1000">
-                {/* CSS 3D Book Container */}
-                <motion.div 
-                  whileHover={{ rotateY: -28, rotateX: 10, scale: 1.05 }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                  style={{ transformStyle: "preserve-3d" }}
-                  className="w-48 h-72 relative cursor-pointer shadow-[20px_20px_40px_rgba(0,0,0,0.5)] origin-left"
-                >
-                  {/* Front Cover */}
-                  <div 
-                    style={{ 
-                      backfaceVisibility: "hidden", 
-                      transform: "translateZ(15px)" 
-                    }}
-                    className="absolute inset-0 bg-[#ffffff] border border-gold/40 rounded-r-md overflow-hidden"
-                  >
-                    <img 
-                      src="/golden-wealth-cycle.png" 
-                      alt="The Golden Wealth Cycle Cover" 
-                      className="w-full h-full object-cover object-center select-none" 
+            {/* Left: Laptop Screen Mockup with Live Web Preview (Order-First on Desktop) */}
+            <div className="lg:col-span-7 flex justify-center order-last lg:order-first">
+              <div className="w-full max-w-[550px] relative">
+                
+                {/* Laptop Body Outer */}
+                <div className="relative bg-[#222222] border-4 border-[#333333] rounded-t-2xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] p-2 aspect-[16/10] overflow-hidden">
+                  
+                  {/* Laptop Camera */}
+                  <div className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-[#111111] rounded-full z-20"></div>
+
+                  {/* Laptop Screen Content (Live Web Preview) */}
+                  <div className="w-full h-full bg-[#0a0a0a] rounded-lg overflow-hidden relative">
+                    <iframe 
+                      src="https://finomarkin.vercel.app" 
+                      title="Finomark Live Preview"
+                      className="w-full h-full border-0 bg-[#0a0a0a]"
+                      sandbox="allow-scripts allow-same-origin allow-forms"
+                      loading="lazy"
                     />
                   </div>
+                </div>
 
-                  {/* Spine */}
-                  <div 
-                    style={{ 
-                      width: "30px", 
-                      transform: "rotateY(-90deg) translateZ(15px)" 
-                    }}
-                    className="absolute top-0 bottom-0 left-0 bg-[#0d172b] border-y border-l border-gold/40 flex items-center justify-center origin-left"
-                  >
-                    <span className="text-[7px] text-gold font-mono uppercase tracking-[0.3em] rotate-90 whitespace-nowrap">
-                      GOLDEN WEALTH CYCLE
-                    </span>
-                  </div>
-
-                  {/* Back Cover */}
-                  <div 
-                    style={{ 
-                      transform: "rotateY(180deg) translateZ(15px)" 
-                    }}
-                    className="absolute inset-0 bg-[#070b14] border border-gold/30 rounded-l-md"
-                  ></div>
-                </motion.div>
+                {/* Laptop Keyboard Base */}
+                <div className="w-[108%] -ml-[4%] h-3 bg-[#444444] rounded-b-xl relative z-10 shadow-[0_12px_24px_rgba(0,0,0,0.4)]">
+                  {/* Laptop Groove */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-[#222222] rounded-b"></div>
+                </div>
               </div>
             </div>
 
-            {/* Right: Project Details */}
-            <div className="lg:col-span-6 space-y-6">
+            {/* Right: Project Details (Order-Last on Desktop) */}
+            <div className="lg:col-span-5 space-y-6">
               <div className="flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-gold/10 border border-gold/20">
-                  <BookOpen className="w-6 h-6 text-gold" />
+                  <Video className="w-6 h-6 text-gold" />
                 </div>
-                <span className="text-xs font-mono tracking-widest uppercase text-gold">Financial Playbook</span>
+                <span className="text-xs font-mono tracking-widest uppercase text-gold">Strategic Agency</span>
               </div>
               
-              <h4 className="text-3xl font-bold text-white tracking-tight">Golden Wealth Cycle</h4>
+              <h4 className="text-3xl font-bold text-white tracking-tight">Finomark — Strategic Agency</h4>
               
               <p className="text-gray-400 font-light leading-relaxed">
-                Authored a comprehensive finance strategy playbook covering behavioral psychology, smart compounding techniques, and core wealth-building structures for modern planners.
+                Designed and engineered the platform for Finomark, a specialized digital content agency bridging complex topics (like finance and tech) with high-impact, cinematic video production and data-driven storytelling to establish organic brand authority.
               </p>
+
+              <div className="flex flex-wrap gap-2.5">
+                <a 
+                  href="https://finomarkin.vercel.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-full bg-gold/10 hover:bg-gold/20 border border-gold/30 text-gold text-xs font-mono font-medium transition-all"
+                >
+                  VISIT LIVE AGENCY SITE →
+                </a>
+              </div>
 
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="p-4 bg-white/5 border border-white/5 rounded-xl">
-                  <span className="block text-gold text-xs font-mono mb-1">CHAPTER 01</span>
-                  <span className="text-sm font-semibold text-white">Personal Finance Framework</span>
+                  <span className="block text-gold text-xs font-mono mb-1">STRATEGY</span>
+                  <span className="text-sm font-semibold text-white">Authority Building</span>
                 </div>
                 <div className="p-4 bg-white/5 border border-white/5 rounded-xl">
-                  <span className="block text-gold text-xs font-mono mb-1">CHAPTER 02</span>
-                  <span className="text-sm font-semibold text-white">Compounding & Growth</span>
+                  <span className="block text-gold text-xs font-mono mb-1">PRODUCTION</span>
+                  <span className="text-sm font-semibold text-white">Cinematic Media</span>
                 </div>
                 <div className="p-4 bg-white/5 border border-white/5 rounded-xl">
-                  <span className="block text-gold text-xs font-mono mb-1">CHAPTER 03</span>
-                  <span className="text-sm font-semibold text-white">Behavioural Finance</span>
+                  <span className="block text-gold text-xs font-mono mb-1">AUTOMATION</span>
+                  <span className="text-sm font-semibold text-white">AI Content Pipelines</span>
                 </div>
                 <div className="p-4 bg-white/5 border border-white/5 rounded-xl">
-                  <span className="block text-gold text-xs font-mono mb-1">CHAPTER 04</span>
-                  <span className="text-sm font-semibold text-white">Financial Planning Models</span>
+                  <span className="block text-gold text-xs font-mono mb-1">OUTCOME</span>
+                  <span className="text-sm font-semibold text-white">Audience Retention</span>
                 </div>
               </div>
             </div>
 
           </div>
 
-          {/* Golden Wealth Cycle - Infinite Scrolling Design Showcase */}
+          {/* Infinite Scrolling Design Showcase */}
           <div className="pt-20 border-t border-white/5 space-y-12">
             <div className="text-center space-y-4 max-w-3xl mx-auto px-4">
               <span className="text-xs font-mono tracking-widest uppercase text-gold font-semibold">Visual Showcase</span>

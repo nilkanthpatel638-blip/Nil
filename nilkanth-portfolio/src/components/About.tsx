@@ -81,19 +81,19 @@ export default function About() {
           </div>
           <div className="overflow-hidden mb-8">
             <h3 className="about-line text-3xl md:text-5xl font-bold text-white tracking-tight">
-              Bridging Corporate Rigor & AI Innovation.
+              Bridging Strategic Precision & Creative Expression.
             </h3>
           </div>
           
           <div className="space-y-6 text-gray-400 text-base md:text-lg font-light leading-relaxed">
             <div className="overflow-hidden">
               <p className="about-line">
-                I am a Finance and Digital Strategy professional with hands-on experience in financial operations, AI-driven content creation, and digital system management.
+                I am a Digital Creator, Designer, and Web Developer with a strong analytical foundation. I combine commerce and management insights with hands-on expertise in video production, graphic design, and modern web application development.
               </p>
             </div>
             <div className="overflow-hidden">
               <p className="about-line">
-                I combine strong analytical thinking with practical AI automation skills to drive operational efficiency and data-informed decision-making. My work focuses on managing institutional accounts, ensuring financial reporting accuracy, and building scalable digital systems that work.
+                My mission is to design interfaces that feel premium and automate workflows through custom AI integrations. By marrying strategic positioning with cinematic storytelling and clean code, I build high-impact web and media experiences that elevate brands and engage audiences.
               </p>
             </div>
           </div>
@@ -102,9 +102,9 @@ export default function About() {
           <div className="mt-12 grid grid-cols-2 gap-8 md:gap-12">
             <div className="about-line p-6 bg-white/5 border border-white/5 rounded-2xl backdrop-blur-md">
               <span className="block text-4xl font-bold text-white mb-2">
-                <Counter value={500} suffix="+" />
+                <Counter value={500} suffix="K+" />
               </span>
-              <span className="text-xs text-gray-400 uppercase tracking-widest leading-normal">Student Financial Records Managed</span>
+              <span className="text-xs text-gray-400 uppercase tracking-widest leading-normal">Content Views & Organic Reach</span>
             </div>
             <div className="about-line p-6 bg-white/5 border border-white/5 rounded-2xl backdrop-blur-md">
               <span className="block text-4xl font-bold text-white mb-2">
@@ -116,13 +116,13 @@ export default function About() {
               <span className="block text-4xl font-bold text-white mb-2">
                 <Counter value={80} suffix="+" />
               </span>
-              <span className="text-xs text-gray-400 uppercase tracking-widest leading-normal">Videos Produced</span>
+              <span className="text-xs text-gray-400 uppercase tracking-widest leading-normal">Videos Produced & Edited</span>
             </div>
             <div className="about-line p-6 bg-white/5 border border-white/5 rounded-2xl backdrop-blur-md">
               <span className="block text-4xl font-bold text-gold mb-2">
                 <Counter value={40} suffix="%" />
               </span>
-              <span className="text-xs text-gray-400 uppercase tracking-widest leading-normal">Workflow Efficiency Improvement</span>
+              <span className="text-xs text-gray-400 uppercase tracking-widest leading-normal">AI Workflow Efficiency Gain</span>
             </div>
           </div>
         </div>
@@ -150,19 +150,19 @@ export default function About() {
               <div>
                 <p className="text-xs text-gray-400 uppercase tracking-widest mb-1.5 font-semibold">Specializations</p>
                 <p className="text-gray-300 text-sm font-light leading-relaxed">
-                  Financial Analysis, AI Automation, Digital Operations, Business Systems
+                  Video Editing, Graphic Design, Web Development, AI Automation, Media Strategy
                 </p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 uppercase tracking-widest mb-1.5 font-semibold">Primary Stack</p>
                 <p className="text-gray-300 text-sm font-light leading-relaxed">
-                  Excel, Google Sheets, Canva, ChatGPT, Automation Tools
+                  Next.js, React, Tailwind, Premiere Pro, After Effects, Canva, ChatGPT
                 </p>
               </div>
             </div>
 
             <div className="pt-4 border-t border-white/10 flex justify-between items-center text-xs font-mono text-gray-500">
-              <span>FIN & STRATEGY PRO</span>
+              <span>CREATIVE TECH PRO</span>
               <span>VER. 2026</span>
             </div>
           </motion.div>

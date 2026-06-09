@@ -4,21 +4,24 @@ import { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, Text, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import { Award, Briefcase, Cpu, CheckSquare } from "lucide-react";
+import { Award, Cpu, CheckSquare } from "lucide-react";
 
 // core skills for 3D sphere tags
 const sphereSkills = [
-  { name: "Financial Analysis", color: "#00d9ff", position: [-2, 1.5, 0] as [number, number, number] },
-  { name: "AI Automation", color: "#00E5FF", position: [2, 1, 1] as [number, number, number] },
-  { name: "Data Analysis", color: "#ffffff", position: [0, 2.5, -2] as [number, number, number] },
-  { name: "Excel Models", color: "#10B981", position: [-1.5, -2, 2] as [number, number, number] },
-  { name: "Strategic Thinking", color: "#6366F1", position: [2, -1.5, -1] as [number, number, number] },
+  { name: "Video Production", color: "#00d9ff", position: [-2.2, 1.6, 0.5] as [number, number, number] },
+  { name: "Graphic Design", color: "#10B981", position: [-1.6, -1.8, 1.8] as [number, number, number] },
+  { name: "Web Development", color: "#ffffff", position: [0.2, 2.4, -1.8] as [number, number, number] },
+  { name: "Creative Strategy", color: "#6366F1", position: [2.0, -1.6, -0.8] as [number, number, number] },
+  { name: "AI Filmmaking", color: "#EC4899", position: [2.2, 1.4, 0.2] as [number, number, number] },
+  { name: "Antigravity AI", color: "#F59E0B", position: [-1.2, -1.2, -1.8] as [number, number, number] },
+  { name: "Codex & Claude", color: "#14B8A6", position: [1.2, 2.0, 1.2] as [number, number, number] },
+  { name: "Video Creation", color: "#EF4444", position: [-2.0, -0.4, 1.0] as [number, number, number] },
 ];
 
 function SkillSphere({ position, color, name, isHovered, setHovered }: any) {
   const meshRef = useRef<THREE.Mesh>(null);
   
-  useFrame((state) => {
+  useFrame(() => {
     if (meshRef.current) {
       meshRef.current.rotation.x += 0.008;
       meshRef.current.rotation.y += 0.008;
@@ -37,7 +40,7 @@ function SkillSphere({ position, color, name, isHovered, setHovered }: any) {
           onPointerOver={() => setHovered(name)}
           onPointerOut={() => setHovered(null)}
         >
-          <sphereGeometry args={[0.7, 32, 32]} />
+          <sphereGeometry args={[0.6, 32, 32]} />
           <meshPhysicalMaterial 
             color={color} 
             metalness={0.8} 
@@ -51,8 +54,8 @@ function SkillSphere({ position, color, name, isHovered, setHovered }: any) {
         
         {/* Render text directly below or on top of node */}
         <Text
-          position={[0, 1.2, 0]}
-          fontSize={0.25}
+          position={[0, 1.1, 0]}
+          fontSize={0.24}
           color="#ffffff"
           anchorX="center"
           anchorY="middle"
@@ -70,24 +73,19 @@ export default function Skills() {
 
   const categories = [
     {
-      title: "Financial Skills",
+      title: "Creative Production",
       icon: <Award className="w-5 h-5 text-gold" />,
-      items: ["Financial Analysis", "Accounting", "Financial Planning", "Reporting"]
+      items: ["Video Editing", "Motion Graphics", "Graphic Design", "Brand Aesthetics", "AI Filmmaking", "Video Creation"]
     },
     {
-      title: "Technology Skills",
+      title: "Web Development",
       icon: <Cpu className="w-5 h-5 text-blue-400" />,
-      items: ["AI Tools & Prompting", "Workflows & Automation", "Web Development", "Website Deployment"]
+      items: ["Frontend Engineering", "React & Next.js", "AI Web Dev (Antigravity/Codex)", "Claude Integration", "Responsive Layouts", "Vercel Deployment"]
     },
     {
-      title: "Business Skills",
-      icon: <Briefcase className="w-5 h-5 text-indigo-400" />,
-      items: ["Data Analysis", "Complex Problem Solving", "Strategic Thinking", "Professional Communication"]
-    },
-    {
-      title: "Tools & Platforms",
+      title: "Business Strategy",
       icon: <CheckSquare className="w-5 h-5 text-emerald-400" />,
-      items: ["MS Excel", "Google Sheets", "Canva Suite", "ChatGPT / LLMs", "AI Media Platforms"]
+      items: ["Content Analytics", "Audience Research", "Client Operations", "Strategic Copywriting"]
     }
   ];
 
@@ -101,14 +99,14 @@ export default function Skills() {
           <h2 className="text-gold font-mono text-sm tracking-widest uppercase mb-4 font-semibold">Core Competencies</h2>
           <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Technical & Strategic Skillset</h3>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-base font-light">
-            Combining financial analytical skills with modern digital innovation, automation, and AI technologies.
+            Blending high-end creative direction, frontend engineering, and AI automation to deliver next-gen digital experiences.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
-          {/* Left Column: Grouped Category Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* Left Column: Grouped Category Cards (Stacked Vertically) */}
+          <div className="grid grid-cols-1 gap-6">
             {categories.map((cat, idx) => (
               <div 
                 key={idx} 

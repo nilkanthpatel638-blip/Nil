@@ -1,21 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, Calendar, Landmark, BookOpen } from "lucide-react";
+import { GraduationCap, Landmark } from "lucide-react";
 
 const educationHistory = [
   {
-    degree: "MBA – Finance",
+    degree: "MBA – Finance & Strategy",
     institution: "Indus University",
     period: "Expected 2027",
-    details: "Focusing on advanced corporate finance, investment analysis, portfolio management, and digital strategy.",
+    details: "Focusing on corporate strategy, digital commerce, brand equity, and business operations analysis to lead creative tech agencies.",
     grade: "Pursuing"
   },
   {
     degree: "Bachelor of Commerce (Accounting & Finance)",
     institution: "Gujarat University",
     period: "Graduated 2025",
-    details: "Studied financial accounting, corporate accounting, commercial laws, taxation, and auditing.",
+    details: "Acquired analytical foundations in business systems, auditing, and corporate finance, supporting performance tracking and data-driven client strategy.",
     grade: "CGPA: 6.67"
   }
 ];
@@ -31,7 +31,7 @@ export default function Education() {
           <h2 className="text-gold font-mono text-sm tracking-widest uppercase mb-4 font-semibold">Academic Foundation</h2>
           <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Education.</h3>
           <p className="text-gray-400 mt-4 max-w-xl mx-auto text-base font-light">
-            My formal studies in accounting, business finance, and management strategy.
+            My formal business studies, providing the analytical foundation for my creative and technical ventures.
           </p>
         </div>
 

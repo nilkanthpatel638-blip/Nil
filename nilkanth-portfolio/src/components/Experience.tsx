@@ -3,33 +3,33 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ShieldCheck, Sparkles, Database, FileSpreadsheet } from "lucide-react";
+import { Sparkles, Database } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
   {
-    role: "Freelancer – Digital & AI Services",
+    role: "Freelancer – Digital Creation & AI Automation",
     company: "Self-Employed",
     period: "Sept 2025 – Present",
     icon: <Sparkles className="w-5 h-5 text-gold" />,
     responsibilities: [
-      "Delivered high-end digital design and AI-powered content services for diverse clients.",
-      "Produced 150+ graphic designs and 80+ video projects under tight schedules.",
-      "Improved content production efficiency by 40% using cutting-edge AI workflows.",
-      "Assisted clients through data-driven digital performance analysis and custom strategies."
+      "Deliver premium video editing, custom motion graphics, and graphic design assets for various brands.",
+      "Develop responsive frontend web applications and deploy seamless user interfaces.",
+      "Design and implement automated workflow systems utilizing AI tools, increasing asset output speed by 40%.",
+      "Draft conversion-oriented content strategies, achieving over 500k+ total views/reach."
     ]
   },
   {
-    role: "Admin Associate (Part-Time)",
+    role: "Digital Operations & Admin Associate",
     company: "MP's Institute of Physics",
     period: "Nov 2022 – Aug 2025",
     icon: <Database className="w-5 h-5 text-blue-400" />,
     responsibilities: [
-      "Managed 500+ student financial records, ensuring 100% database integrity and confidentiality.",
-      "Maintained 100% reconciliation accuracy across fee collection and processing.",
-      "Streamlined invoice collection and digital tracking systems, reducing billing discrepancies.",
-      "Coordinated cross-functional financial transactions and monthly management reporting."
+      "Administered database systems for 500+ students, ensuring zero discrepancies in academic and system records.",
+      "Designed visual layouts, announcements, and promotional graphic banners for the institute.",
+      "Developed automated tracking templates in Excel, streamlining scheduling and parent-reporting systems.",
+      "Managed digital communication channels and coordinated monthly operational reports."
     ]
   }
 ];
@@ -84,7 +84,7 @@ export default function Experience() {
         <div className="mb-20 text-center md:text-left">
           <h2 className="text-gold font-mono text-sm tracking-widest uppercase mb-4">Career Journey</h2>
           <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Professional Experience.</h3>
-          <p className="text-gray-400 mt-4 text-lg font-light">A timeline of financial administration, digital design, and automated systems.</p>
+          <p className="text-gray-400 mt-4 text-lg font-light">A timeline of digital media creation, web engineering, and automated workflows.</p>
         </div>
 
         <div className="relative pl-8 md:pl-16 ml-4 md:ml-12 border-l border-white/10">

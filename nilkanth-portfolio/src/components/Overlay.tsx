@@ -68,7 +68,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
               transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-base sm:text-xl md:text-2xl text-gold font-light tracking-widest uppercase font-sans text-left leading-tight"
             >
-              Finance & Digital Strategy Professional
+              Digital Creator • Developer • Designer
             </motion.h2>
           </div>
 
@@ -79,7 +79,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
             transition={{ duration: 1.5, delay: 0.4 }}
             className="text-gray-400 max-w-2xl text-base sm:text-lg md:text-xl font-light mb-10 leading-relaxed text-left"
           >
-            "Bridging Finance, Technology, and AI to Build Smarter Solutions."
+            &quot;Crafting high-impact content, premium designs, and AI-powered web solutions.&quot;
           </motion.p>
 
           {/* CTA Buttons */}
@@ -136,12 +136,12 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
         className="absolute inset-0 flex flex-col items-start justify-center p-8 md:p-24 lg:p-32 max-w-4xl"
       >
         <div className="space-y-4">
-          <span className="text-gold font-mono text-sm tracking-widest uppercase">Digital Strategy</span>
+          <span className="text-gold font-mono text-sm tracking-widest uppercase">Digital Creation & Tech</span>
           <h2 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
-            I build digital experiences and automated workflows.
+            I design visual experiences and write automated workflows.
           </h2>
           <p className="text-gray-400 text-lg font-light max-w-xl">
-            Streamlining business operations and data-driven client engagement with state-of-the-art AI tooling.
+            Building premium interfaces, editing cinematic content, and developing AI-powered workflows to elevate digital presence.
           </p>
         </div>
       </motion.div>
@@ -152,12 +152,12 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
         className="absolute inset-0 flex flex-col items-end justify-center text-right p-8 md:p-24 lg:p-32 ml-auto max-w-4xl"
       >
         <div className="space-y-4">
-          <span className="text-gold font-mono text-sm tracking-widest uppercase">Financial Innovation</span>
+          <span className="text-gold font-mono text-sm tracking-widest uppercase">Business-Minded Creativity</span>
           <h2 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
-            Bridging analytical finance and modern engineering.
+            Bridging analytical strategy and high-end digital production.
           </h2>
           <p className="text-gray-400 text-lg font-light max-w-xl ml-auto">
-            Combining accounting rigor, financial awareness, and automation to optimize growth and transparency.
+            Leveraging my background in commerce and management to build high-conversion designs and automated systems.
           </p>
         </div>
       </motion.div>

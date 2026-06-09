@@ -14,7 +14,7 @@ export default function Certifications() {
           <h2 className="text-gold font-mono text-sm tracking-widest uppercase mb-4 font-semibold">Credentials</h2>
           <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Certifications.</h3>
           <p className="text-gray-400 mt-4 max-w-md mx-auto text-base font-light">
-            Professional milestones validating financial intelligence and compliance knowledge.
+            Professional milestones validating compliance standards, strategic communication, and media accuracy.
           </p>
         </div>
 
@@ -38,24 +38,24 @@ export default function Certifications() {
           <div className="flex-1 text-center md:text-left space-y-4">
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
               <span className="text-xs font-mono text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full uppercase tracking-wider font-semibold">
-                SEBI Certified
+                Media Compliance
               </span>
               <span className="text-xs text-gray-500 font-mono flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
-                Verified Credential
+                SEBI Awareness Initiative
               </span>
             </div>
 
             <h4 className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight group-hover:text-gold transition-colors">
-              SEBI Financial Awareness Certificate
+              SEBI Financial Awareness Certification
             </h4>
 
             <p className="text-gray-400 font-light text-sm md:text-base leading-relaxed">
-              Awarded for demonstrating proficiency in capital markets, investor rights, regulatory compliance guidelines, and personal financial management principles under SEBI awareness initiatives.
+              Demonstrates proficiency in capital market frameworks, investor rights, and regulatory compliance guidelines, ensuring high-accuracy content standards in financial media production.
             </p>
 
             <div className="pt-2 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-xs font-mono text-gray-500 gap-2">
-              <span>ISSUED BY: SECURITIES AND EXCHANGE BOARD OF INDIA</span>
+              <span>ISSUED BY: SECURITIES AND EXCHANGE BOARD OF INDIA (SEBI)</span>
               <span className="text-gold font-semibold">COMPLETED</span>
             </div>
           </div>
